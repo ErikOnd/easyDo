@@ -36,6 +36,14 @@
                                 </div>
 
                                 <div class="form-group mb-3">
+                                    <input type="password" placeholder="Confirm Password" id="confirm_password" class="form-control"
+                                           name="confirm_password" required>
+                                    @if ($errors->has('password'))
+                                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                                    @endif
+                                </div>
+
+                                <div class="form-group mb-3">
                                     <div class="checkbox">
                                         <label><input type="checkbox" name="remember"> Remember Me</label>
                                     </div>

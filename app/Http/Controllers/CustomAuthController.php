@@ -18,6 +18,7 @@ class CustomAuthController extends Controller
 
     public function customLogin(Request $request)
     {
+
         $request->validate([
             'email' => 'required',
             'password' => 'required',
@@ -44,7 +45,8 @@ class CustomAuthController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'min:6|required_with:confirm_password|same:confirm_password',
+            'confirm_password' => 'min:6'
         ]);
 
         $data = $request->all();

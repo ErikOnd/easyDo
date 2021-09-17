@@ -11,7 +11,7 @@
                             <form method="POST" action="{{ route('login.custom') }}">
                                 @csrf
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="Email" id="email" class="form-control" name="email"
+                                    <input type="email" placeholder="Email" id="email" class="form-control" name="email"
                                            required
                                            autofocus>
                                 </div>
