@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -10,6 +11,12 @@ use Illuminate\Support\Facades\Auth;
 
 class CustomAuthController extends Controller
 {
+
+    public function __construct()
+    {
+
+    }
+
 
     public function index()
     {

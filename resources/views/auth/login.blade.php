@@ -1,12 +1,12 @@
-@extends('dashboard')
+@extends('layout.layout')
 
 @section('content')
     <main class="login-form">
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card">
-                        <h3 class="card-header text-center">Login</h3>
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <h3 class="text-center text-primary">Login</h3>
                         <div class="card-body">
                             <form method="POST" action="{{ route('login.custom') }}">
                                 @csrf
@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Sign in</button>
+                                    <button type="submit" class="btn btn-outline-primary">Sign in</button>
                                 </div>
                                 @if($errors->any())
                                     <div class="alert alert-danger mt-3" role="alert">

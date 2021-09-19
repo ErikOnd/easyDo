@@ -1,12 +1,12 @@
-@extends('dashboard')
+@extends('layout.layout')
 
 @section('content')
     <main class="signup-form">
         <div class="cotainer">
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card">
-                        <h3 class="card-header text-center">Register User</h3>
+                    <div class="card shadow p-3 mb-5 bg-body rounded">
+                        <h3 class="text-center text-primary">Registration</h3>
                         <div class="card-body">
 
                             <form action="{{ route('register.custom') }}" method="POST">
@@ -50,7 +50,7 @@
                                 </div>
 
                                 <div class="d-grid mx-auto">
-                                    <button type="submit" class="btn btn-dark btn-block">Sign up</button>
+                                    <button type="submit" class="btn btn-outline-primary">Sign up</button>
                                 </div>
                             </form>
 
