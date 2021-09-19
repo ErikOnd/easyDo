@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -13,7 +14,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return redirect();
+        $tasks = Todo::all();
+        return view('dashboard')->with('tasks', $tasks);
     }
 
     /**
