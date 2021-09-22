@@ -12,7 +12,10 @@
                         @endforeach
                     </div>
                     <div class="d-grid mx-auto">
-                        <button type="button" class="btn btn-outline-primary">Add New Task</button>
+                        <form action="addTask" method="get">
+                            @csrf
+                            <input type="submit" value="Add new task" class="btn btn-outline-primary"/>
+                        </form>
                     </div>
                 </div>
             </div>

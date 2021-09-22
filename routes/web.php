@@ -21,3 +21,8 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 Route::get('dashboard', [TaskController::class,'index']);
+
+Route::get('addTask', [TaskController::class, 'addTask']);
+Route::post('addTask', [TaskController::class,'create'])->name('create.task');;
+
+

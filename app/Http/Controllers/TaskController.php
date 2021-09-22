@@ -4,9 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\Todo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
+
+   public function addTask()
+    {
+        if (Auth::check()) {
+            return view('addTask');
+        }
+        return redirect("login")->withSuccess('You are not allowed to access');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +34,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
